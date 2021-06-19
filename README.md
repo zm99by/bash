@@ -1,7 +1,8 @@
 # bash
-systemctl daemon-reload
-systemctl enable mysqld_exporter
 
+- systemctl daemon-reload
+- systemctl enable mysqld_exporter
+```
 [Unit]
 Description=Prometheus
 Wants=network-online.target
@@ -18,22 +19,23 @@ ExecStart=/opt/prometheus/prometheus \
 
 [Install]
 WantedBy=default.target
-
+```
 -----------------------------------
-sudo apt-get install mysql-server
 
+- sudo apt-get install mysql-server
+```
 CREATE USER 'user'@'localhost' IDENTIFIED BY '12345';
 GRANT ALL PRIVILEGES ON * . * TO 'user'@'localhost';
-
+```
 https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0/mysqld_exporter-0.13.0.linux-amd64.tar.gz
-
+```
 
 export DATA_SOURCE_NAME='user:12345@(prometheus:9111)/'
 ./mysqld_exporter <flags>
 
-
+```
 /etc/systemd/system/mysqld_exporter.service
-
+```
 [Unit]
 Description=Mysql Exporter
 Wants=network-online.target
@@ -49,6 +51,4 @@ ExecStart=/opt/mysqld_exporter/mysqld_exporter \
 [Install]
 WantedBy=multi-user.target
 
-
-
-
+```
