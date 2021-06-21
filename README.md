@@ -36,7 +36,7 @@ export DATA_SOURCE_NAME='user:12345@(prometheus:9111)/'
 ```
 /etc/systemd/system/mysqld_exporter.service
 ```
-[Unit]
+Unit]
 Description=Mysql Exporter
 Wants=network-online.target
 After=network-online.target
