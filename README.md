@@ -46,7 +46,7 @@ User=mysqluser
 Group=mysqluser
 Type=simple
 ExecStart=/opt/mysqld_exporter/mysqld_exporter \ 
-    --web.listen-address=localhost:9111 
+    --web.listen-address=":9111" 
 
 [Install]
 WantedBy=multi-user.target
