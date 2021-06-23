@@ -1,8 +1,8 @@
 # bash
-
-### nc: Netcat
+```
+Netcat
 nc -zvw3 10.128.0.12 5432
-
+```
 
 - systemctl daemon-reload
 - systemctl enable mysqld_exporter
