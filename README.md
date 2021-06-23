@@ -1,6 +1,6 @@
 # bash
 
-# nc: Netcat
+### nc: Netcat
 nc -zvw3 10.128.0.12 5432
 
 
