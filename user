@@ -1,7 +1,11 @@
-#create nologin User
-
+# create nologin User
 useradd -s /usr/bin/nologin -m user  
-
-#create login User
-
+# create login User
 useradd -m -s /bin/bash pupkin 
+# create arhive 
+tar -cvf tmp/arch.tar etc/passwd etc/network/* && gzip /tmp/arch.tar
+#unpack arhive
+tar -zxvf arch.tar.gz
+# find files 
+find / -name 'test' -type f
+
