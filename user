@@ -1,0 +1,2 @@
+#create nologin User
+useradd -s /usr/bin/nologin -m user 
