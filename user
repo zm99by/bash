@@ -1,2 +1,7 @@
 #create nologin User
-useradd -s /usr/bin/nologin -m user 
+
+ - `useradd -s /usr/bin/nologin -m user`  
+
+#create login User
+
+- `useradd -m -s /bin/bash pupkin` 
